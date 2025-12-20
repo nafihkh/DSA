@@ -26,3 +26,13 @@ function dequeue(){
 function peek(){
     return queue[front]
 }
+//isFull
+function IsFull(){
+    if(rear===queue.length-1)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
