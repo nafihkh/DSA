@@ -22,3 +22,7 @@ function dequeue(){
         return data;
     }
 }
+//Peek()
+function peek(){
+    return queue[front]
+}
