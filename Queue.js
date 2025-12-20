@@ -36,3 +36,14 @@ function IsFull(){
         return false;
     }
 }
+//IsEmpty
+function IsEmpty() {
+    if(front<0 || front>rear)
+    {
+        return true
+    }
+    else
+    {
+        return false;
+    }
+}
