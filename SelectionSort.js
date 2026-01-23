@@ -2,7 +2,7 @@ function SelectionSort(arr){
     let n = arr.length;
     for (let i = 0; i < n; i++) {
         for (let j = i+1; j < n; j++) {
-            if(arr[i]>arr[j])
+            if(arr[i]>arr[j]) 8>1
             {
                 let temp = arr[i];
                 arr[i]=arr[j]
@@ -14,4 +14,4 @@ function SelectionSort(arr){
     }
     console.log(arr)
 }
-SelectionSort([24,13,65,42])
+SelectionSort([8,1,2,5,3])

@@ -14,4 +14,3 @@ function BubbleSort(arr){
     }
     console.log(arr)
 }
-BubbleSort([24,13,65,42])

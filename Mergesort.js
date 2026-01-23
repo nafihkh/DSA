@@ -1,29 +1,28 @@
-function Meargesort(arr){
-    let n  = arr.length;
-    if(n <= 1)return arr;
+let arr = [10,20,30,11,13,15];
 
+function MergeSort(arr){
+    let n = arr.length;
+    if(n <= 1) return arr
     let mid = Math.floor(n/2);
+    let left = MergeSort(arr.slice(0,mid));
+    let right = MergeSort(arr.slice(mid));
 
-    let left = Meargesort(arr.slice(0, mid));
-    let right = Meargesort(arr.slice(mid));
-
-    return merge(left , right);
+    return Merge(left , right);
 }
-function merge(left, right){
-    let result =  [];
-    let i = 0,j = 0;
-
-    while(i < left.length && j < right.length){
-        if(left[i] < right[j]){
-            result.push(left[i]);
-            i++;
+function Merge(left , right){
+    let result = [];
+    let l = 0,r =0;
+    while(l < left.length && r < right.length){
+        if(left[l] < right[r]){
+            result.push(left[l]);
+            l++;
         }
-        else {
-            result.push(right[j]);
-            j++;
+        else{
+            result.push(right[r]);
+            r++;
         }
     }
-    return  result.concat(left.slice(i)).concat(right.slice(j));
+    return result.concat(left.slice(l).concat(right.slice(r)));
 }
-
-console.log(Meargesort([10,9,8,7,6,5,4,3,2,1,11]))
+let result = MergeSort(arr);
+console.log(result)
