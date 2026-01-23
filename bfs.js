@@ -20,11 +20,17 @@ root.right = new Node(15);
 root.right.right = new Node(20)
 
 
-function dfs(root){
+function bfs(root){
     if(!root) return;
 
-    dfs(root.left);
-    console.log(root.value);
-    dfs(root.right);
+    let que = [root];
+
+    while(que.length > 0){
+        let node = que.shift();
+        console.log(node.value);
+        if(node.left) que.push(node.left);
+        if(node.right) que.push(node.right)
+    }
+    
 }
-dfs(root)
+bfs(root)
